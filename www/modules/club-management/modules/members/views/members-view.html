@@ -1,0 +1,29 @@
+<ion-view title='<img src="img/nc-logo.png" class="img">'>
+    <ion-nav-buttons side="right">
+      <button class="button icon-left ion-person-add button-positive">
+          New
+      </button>
+   </ion-nav-buttons>
+  <div class="bar bar-subheader item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios7-search placeholder-icon"></i>
+        <input type="search" placeholder="Search">
+      </label>
+      <button class="button button-clear">
+        Cancel
+      </button>
+    </div>
+  <ion-content class="has-header">
+    <div class="list has-header">
+          <div class="item item-button-right my-item"
+             collection-repeat="member in members"
+             collection-item-width="'100%'"
+             collection-item-height="80"
+             ng-click="show()">
+              <img src="/img/mcfly.jpg">
+              <h2>{{member.name}}</h2>
+              <p>{{member.id}}</p>
+          </div>
+    </div>
+  </ion-content>
+</ion-view>

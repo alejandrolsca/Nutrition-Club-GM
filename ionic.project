@@ -1,0 +1,8 @@
+{
+  "name": "nc-management",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ]
+}

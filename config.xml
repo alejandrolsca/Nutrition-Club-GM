@@ -21,7 +21,7 @@
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
   <!-- Define app icon for each platform. -->
-    <icon src="cordova_512.png" />
+    <icon src="res/icon/cordova_512.png" />
     <icon src="res/icon/cordova_android_36.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="res/icon/cordova_android_48.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="res/icon/cordova_android_72.png"   gap:platform="android"    gap:density="hdpi" />

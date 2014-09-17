@@ -9,15 +9,15 @@
 
     angular.module('app', [
         'ionic', 
-        require('./tab').name,
+        //require('./tabs').name,
         require('./home').name,
-        require('./club-management').name,
+        //require('./club-management').name,
         require('./daily-activity').name,   
         require('./daily-consumption').name,
-        require('./reports').name,
-        require('./goals').name,
+        //require('./reports').name,
+        //require('./goals').name,
         require('./more').name,
-        require('./settings').name
+        //require('./settings').name
         //require('./login').name,
         //require('./logout').name
     ])

@@ -3,7 +3,7 @@
 module.exports = (function(angular){
     'use strict';
     
-    return angular.module('app.club-management',[
+    return angular.module('tab.club-management',[
         require('./modules/members').name,
     ])
 
@@ -11,12 +11,11 @@ module.exports = (function(angular){
       $stateProvider
         .state('tab.club-management', {
           url: "/club-management",
-          views: {
-            'tab-club-management' :{
+            views:
+            "tabs-club-management": {
               templateUrl: "modules/club-management/views/club-management-view.html",
               controller: 'ClubManagementCtrl'
             }
-          }
         })
     })
 

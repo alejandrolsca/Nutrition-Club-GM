@@ -1,18 +1,14 @@
 module.exports = (function(angular){
     'use strict';
     
-    return angular.module('tab.daily-consumption',[])
+    return angular.module('app.daily-consumption',[])
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('tab.daily-consumption', {
+        .state('daily-consumption', {
           url: "/daily-consumption",
-          views: {
-            'tab-daily-consumption' :{
               templateUrl: "modules/daily-consumption/views/daily-consumption-view.html",
               controller: 'DailyConsumptionCtrl'
-            }
-          }
         })
     })
 

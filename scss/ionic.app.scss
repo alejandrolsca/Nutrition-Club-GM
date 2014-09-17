@@ -14,10 +14,48 @@ $assertive:                       #ef4e3a !default;
 $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
 */
-$base-background-color:           #fff !default;
-$base-color:                      #555 !default;
-$balanced:                        #8CC641 !default;
-$positive:                        #387C28 !default;
+
+/* Custom Colors */
+
+$nc-highlight-color:            #00d6fe !default;
+$nc-main-color:                 #222 !default;
+$nc-top-color:                  #333 !default;
+$nc-text-color:                 #bababa !default;
+
+/* Base */
+
+$base-background-color:         transparent !default;
+$base-color:                    #a7aeab !default;
+
+/* bars */
+
+$bar-height:                      44px !default;
+$bar-title-font-size:             17px !default;
+$bar-padding-portrait:            0px !default;
+$bar-padding-landscape:           0px !default;
+$bar-transparency:                1 !default;
+
+$bar-dark-bg:                   rgba($nc-top-color, 1) !default;
+$bar-dark-text:                 $nc-text-color !default;
+$bar-dark-border:               $nc-highlight-color !default;
+$bar-dark-active-bg:            #262626 !default;
+$bar-dark-active-border:        #000 !default;
+
+/* forms */
+
+$input-bg:                        #444 !default;
+$input-bg-disabled:               #222 !default;
+
+$input-color:                     $nc-text-color !default;
+$input-border:                    #555 !default;
+$input-border-width:              5px !default;
+$input-label-color:               $nc-text-color !default;
+$input-color-placeholder:         $nc-text-color !default;
+
+i {
+    color: $nc-highlight-color;
+}
+
 .img {
     zoom: .5;
 }
@@ -34,23 +72,40 @@ $positive:                        #387C28 !default;
   right: 0;
   padding: 10px;
 }
-.menu-icon {
-    border-radius: .5em;
+.menu {
+    display: block;
+    background: -webkit-linear-gradient(top, #222 0%,#333 100%) !important;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+}
+.menu a {
+    position: relative;
+    margin-top: 1px;
+    border-right: 1px solid #222;
     color: #fff;
     display: block;
-    background: #444;
+    background: transparent;
     padding: .5em;
     text-align: center;
     text-decoration: none;
     font-size: .75em;
-    height: 6.5em;
     overflow: hidden;
+    line-height: 1em;
+    width: 25%;
+    float: left;
 }
-.menu-icon:active {
+.menu a:last-child {
+    border-right: none;
+}
+
+.menu a:active {
     background-color: #f0b840;
 }
-.menu-icon i {
-    font-size: 3.5em;
+.menu i {
+    font-size: 2em;
 }
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;

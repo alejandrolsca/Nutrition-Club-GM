@@ -1,18 +1,14 @@
 module.exports = (function(angular){
     'use strict';
     
-    return angular.module('tab.home',[])
+    return angular.module('app.home',[])
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('tab.home', {
+        .state('home', {
           url: "/home",
-          views: {
-            'tab-home':{
-              templateUrl: "modules/home/views/home-view.html",
-              controller: 'HomeCtrl'
-            }
-          }
+                templateUrl: "modules/home/views/home-view.html",
+                controller: 'HomeCtrl'
         })
     })
 

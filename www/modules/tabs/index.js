@@ -1,19 +1,19 @@
 module.exports = (function(angular){
     'use strict';
     
-    return angular.module('tab',[])
+    return angular.module('app.tabs',[])
 
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
 
-        .state('tab', {
-          url: "/tab",
+        .state('tabs', {
+          url: "/tabs",
           abstract: true,
-          templateUrl: "modules/tab/views/tab-view.html"
+          templateUrl: "modules/tabs/views/tabs-view.html"
         })
         
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/tab/club-management');
+        $urlRouterProvider.otherwise('/tabs/home');
     })
 
 })(angular);

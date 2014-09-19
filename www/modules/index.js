@@ -17,7 +17,7 @@
         //require('./reports').name,
         require('./goals').name,
         require('./more').name,
-        //require('./settings').name
+        require('./settings').name
         //require('./login').name,
         //require('./logout').name
     ])

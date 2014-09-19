@@ -14,64 +14,6 @@ $assertive:                       #ef4e3a !default;
 $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
 */
-/* Custom Colors */
-/* Base */
-/* bars */
-i {
-  color: #00d6fe; }
-
-.img {
-  zoom: 0.5; }
-
-/*
-.list .my-item img {
-  border-radius: .5em;
-  height: 60px;
-  width: 60px;
-  float: left;
-  margin-right: 10px;
-}
-.list .my-item.item {
-  left: 0;
-  right: 0;
-  padding: 10px;
-}
-.menu {
-    display: block;
-    background: -webkit-linear-gradient(top, #222 0%,#333 100%) !important;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100% !important;
-}
-.menu a {
-    position: relative;
-    margin-top: 1px;
-    border-right: 1px solid #222;
-    color: #fff;
-    display: block;
-    background: transparent;
-    padding: .5em;
-    text-align: center;
-    text-decoration: none;
-    font-size: .75em;
-    overflow: hidden;
-    line-height: 1em;
-    width: 25%;
-    float: left;
-}
-.menu a:last-child {
-    border-right: none;
-}
-
-.menu a:active {
-    background-color: #f0b840;
-}
-.menu i {
-    font-size: 2em;
-}
-*/
 /*!
   Ionicons, v1.5.2
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -2265,7 +2207,7 @@ body, .ionic-body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  color: #a7aeab;
+  color: #999;
   word-wrap: break-word;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -2546,7 +2488,7 @@ ion-infinite-scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-color: #222;
   overflow: hidden; }
 
 ion-nav-view {
@@ -2580,7 +2522,7 @@ cite {
   text-align: center; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #a7aeab;
+  color: #999;
   font-weight: 500;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.2; }
@@ -2788,13 +2730,13 @@ a.subdued {
   left: 0;
   z-index: 10;
   box-sizing: border-box;
-  padding: 0px;
+  padding: 5px;
   width: 100%;
   height: 44px;
   border-width: 0;
   border-style: solid;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #333;
   background-color: white;
   /* border-width: 1px will actually create 2 device pixels on retina */
   /* this nifty trick sets an actual 1px border on hi-res displays */
@@ -2802,7 +2744,7 @@ a.subdued {
   @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .bar {
       border: none;
-      background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
+      background-image: linear-gradient(0deg, #333, #333 50%, transparent 50%);
       background-position: bottom;
       background-size: 100% 1px;
       background-repeat: no-repeat; } }
@@ -3215,10 +3157,10 @@ a.subdued {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  border-color: #b2b2b2;
-  background-color: #f8f8f8;
-  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
-  color: #444;
+  border-color: #333;
+  background-color: transparent;
+  background-image: linear-gradient(0deg, #333, #333 50%, transparent 50%);
+  color: #555;
   position: absolute;
   bottom: 0;
   z-index: 5;
@@ -3229,8 +3171,8 @@ a.subdued {
   background-size: 0;
   line-height: 49px; }
   .tabs .tab-item .badge {
-    background-color: #444;
-    color: #f8f8f8; }
+    background-color: #555;
+    color: transparent; }
   @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .tabs {
       padding-top: 2px;
@@ -3314,13 +3256,13 @@ a.subdued {
     color: #8a6de9; }
 
 .tabs-dark > .tabs, .tabs.tabs-dark {
-  border-color: #333;
-  background-color: #222;
-  background-image: linear-gradient(0deg, #333, #333 50%, transparent 50%);
-  color: #bababa; }
+  border-color: #111;
+  background-color: #444;
+  background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);
+  color: #fff; }
   .tabs-dark > .tabs .tab-item .badge, .tabs.tabs-dark .tab-item .badge {
-    background-color: #bababa;
-    color: #222; }
+    background-color: #fff;
+    color: #444; }
 
 .tabs-striped .tabs {
   background-color: white;
@@ -4968,7 +4910,7 @@ legend {
   margin-bottom: 1.42857;
   padding: 0;
   width: 100%;
-  border: 1px solid #222;
+  border: 1px solid #ddd;
   color: #444;
   font-size: 21px;
   line-height: 2.85714; }
@@ -5104,7 +5046,7 @@ input, button, select, textarea {
   padding: 7px 10px 7px 0px;
   max-width: 200px;
   width: 35%;
-  color: #333;
+  color: #444;
   font-size: 16px; }
 
 .placeholder-icon {
@@ -5129,7 +5071,7 @@ input, button, select, textarea {
   border-radius: 2px;
   padding: 4px 8px 3px 0;
   border: none;
-  background-color: #333; }
+  background-color: #fff; }
 
 .item-stacked-label input {
   overflow: hidden;
@@ -5159,7 +5101,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   padding-top: 2px;
   padding-left: 0;
   height: 34px;
-  color: #bababa;
+  color: #111;
   vertical-align: middle;
   font-size: 14px;
   line-height: 16px; }
@@ -5174,11 +5116,11 @@ textarea {
   padding-left: 0; }
   textarea::-moz-placeholder {
     /* Firefox 19+ */
-    color: #888888; }
+    color: #aaaaaa; }
   textarea:-ms-input-placeholder {
-    color: #888888; }
+    color: #aaaaaa; }
   textarea::-webkit-input-placeholder {
-    color: #888888;
+    color: #aaaaaa;
     text-indent: -3px; }
 
 textarea {
@@ -5204,15 +5146,15 @@ input[type="file"] {
 
 input::-moz-placeholder, textarea::-moz-placeholder {
   /* Firefox 19+ */
-  color: #888888; }
+  color: #aaaaaa; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #888888; }
+  color: #aaaaaa; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #888888;
+  color: #aaaaaa;
   text-indent: 0; }
 
 input[disabled], select[disabled], textarea[disabled], input[readonly]:not(.cloned-text-input), textarea[readonly]:not(.cloned-text-input), select[readonly] {
-  background-color: #222;
+  background-color: #f8f8f8;
   cursor: not-allowed; }
 
 input[type="radio"][disabled], input[type="checkbox"][disabled], input[type="radio"][readonly], input[type="checkbox"][readonly] {
@@ -7854,3 +7796,18 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
 .platform-c:not(.enable-transitions) * {
   -webkit-transition: none !important;
   transition: none !important; }
+
+.bar {
+  background: -webkit-linear-gradient(top, #333333 0%, #222222 100%); }
+
+.tabs {
+  background: -webkit-linear-gradient(top, #333333 0%, #222222 100%); }
+
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+  color: #bababa; }
+
+.tab-item {
+  border-right: 1px solid #222; }
+
+img {
+  zoom: 0.5; }

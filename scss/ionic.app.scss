@@ -14,40 +14,14 @@ $assertive:                       #ef4e3a !default;
 $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
 */
+$base-background-color:           #222 !default;
+$base-color:                      #999 !default;
 
-/* Custom Colors */
-
-$nc-highlight-color:            #00d6fe !default;
-$nc-main-color:                 #222 !default;
-$nc-top-color:                  #333 !default;
-$nc-text-color:                 #bababa !default;
-
-/* Base */
-
-$base-background-color:         transparent !default;
-$base-color:                    #a7aeab !default;
-
-/* bars */
-
-$bar-height:                      44px !default;
-$bar-title-font-size:             17px !default;
-$bar-padding-portrait:            0px !default;
-$bar-padding-landscape:           0px !default;
-$bar-transparency:                1 !default;
-
-
-
-// Forms
+// Bars
 // -------------------------------
 
-$input-bg:                        $nc-top-color !default;
-$input-bg-disabled:               $nc-main-color !default;
+$bar-default-border:              #333 !default;
 
-$input-color:                     #bababa !default;
-$input-border:                    $nc-main-color !default;
-$input-border-width:              1px !default;
-$input-label-color:               $nc-top-color !default;
-$input-color-placeholder:         lighten(#222, 40%) !default;
 
 // Tabs
 // -------------------------------
@@ -60,87 +34,31 @@ $tabs-badge-padding:              1px 6px !default;
 $tabs-badge-font-size:            12px !default;
 $tabs-text-font-size:             14px !default;
 
-$tabs-dark-bg:                    $nc-main-color !default;
-$tabs-dark-border:                $nc-top-color  !default;
-$tabs-dark-text:                  $nc-text-color !default;
+$tabs-default-bg:                 transparent !default;
+$tabs-default-border:             #333 !default;
+$tabs-default-text:               #555 !default;
 
-
-i {
-    color: $nc-highlight-color;
-}
-
-.img {
-    zoom: .5;
-}
-/*
-.list .my-item img {
-  border-radius: .5em;
-  height: 60px;
-  width: 60px;
-  float: left;
-  margin-right: 10px;
-}
-.list .my-item.item {
-  left: 0;
-  right: 0;
-  padding: 10px;
-}
-.menu {
-    display: block;
-    background: -webkit-linear-gradient(top, #222 0%,#333 100%) !important;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100% !important;
-}
-.menu a {
-    position: relative;
-    margin-top: 1px;
-    border-right: 1px solid #222;
-    color: #fff;
-    display: block;
-    background: transparent;
-    padding: .5em;
-    text-align: center;
-    text-decoration: none;
-    font-size: .75em;
-    overflow: hidden;
-    line-height: 1em;
-    width: 25%;
-    float: left;
-}
-.menu a:last-child {
-    border-right: none;
-}
-
-.menu a:active {
-    background-color: #f0b840;
-}
-.menu i {
-    font-size: 2em;
-}
-*/
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
-// Tab Mixins
-// --------------------------------------------------
-
-@mixin tab-style($bg-color, $border-color, $color) {
-  border-color: $border-color;
-  background-color: blue;
-  background-image: linear-gradient(0deg, $border-color, $border-color 50%, transparent 50%);
-  color: $color;
-} 
-
-@mixin tab-badge-style($bg-color, $color) {
-  .tab-item .badge {
-    background-color: $bg-color;
-    color: $color;
-  }
+.bar {
+    background: -webkit-linear-gradient(top, rgba(#333,1) 0%,rgba(#222,1) 100%);
 }
 
+.tabs {
+    background: -webkit-linear-gradient(top, rgba(#333,1) 0%,rgba(#222,1) 100%);
+}
+
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+    color: #bababa;
+}
+
+.tab-item {
+    border-right:1px solid #222;
+}
+ img {
+    zoom: .5;
+ }

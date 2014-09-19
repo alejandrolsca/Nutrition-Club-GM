@@ -8,7 +8,7 @@ module.exports = (function(angular){
         .state('tab.settings', {
           url: "/settings",
           views: {
-            'tab-club-management' :{
+            'tab-home' :{
               templateUrl: "modules/settings/views/settings-view.html",
               controller: 'SettingsCtrl'
             }

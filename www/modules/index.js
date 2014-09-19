@@ -9,19 +9,19 @@
 
     angular.module('app', [
         'ionic', 
-        //require('./tabs').name,
+        require('./tabs').name,
         require('./home').name,
         //require('./club-management').name,
         require('./daily-activity').name,   
         require('./daily-consumption').name,
         //require('./reports').name,
-        //require('./goals').name,
+        require('./goals').name,
         require('./more').name,
         //require('./settings').name
         //require('./login').name,
         //require('./logout').name
     ])
-
+//
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

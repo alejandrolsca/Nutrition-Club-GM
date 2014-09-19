@@ -5,10 +5,14 @@ module.exports = (function(angular){
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('home', {
+        .state('tab.home', {
           url: "/home",
+            views:{
+                "tab-home":{
                 templateUrl: "modules/home/views/home-view.html",
                 controller: 'HomeCtrl'
+                }
+            }
         })
     })
 

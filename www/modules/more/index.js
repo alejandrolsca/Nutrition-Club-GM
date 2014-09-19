@@ -5,10 +5,14 @@ module.exports = (function(angular){
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('more', {
+        .state('tab.more', {
           url: "/more",
-              templateUrl: "modules/more/views/more-view.html",
-              controller: 'MoreCtrl'
+            views:{
+                "tab-more":{
+                  templateUrl: "modules/more/views/more-view.html",
+                  controller: 'MoreCtrl'
+                }
+            }
         })
     })
 

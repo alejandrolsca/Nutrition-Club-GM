@@ -35,22 +35,35 @@ $bar-padding-portrait:            0px !default;
 $bar-padding-landscape:           0px !default;
 $bar-transparency:                1 !default;
 
-$bar-dark-bg:                   rgba($nc-top-color, 1) !default;
-$bar-dark-text:                 $nc-text-color !default;
-$bar-dark-border:               $nc-highlight-color !default;
-$bar-dark-active-bg:            #262626 !default;
-$bar-dark-active-border:        #000 !default;
 
-/* forms */
 
-$input-bg:                        #444 !default;
-$input-bg-disabled:               #222 !default;
+// Forms
+// -------------------------------
 
-$input-color:                     $nc-text-color !default;
-$input-border:                    #555 !default;
-$input-border-width:              5px !default;
-$input-label-color:               $nc-text-color !default;
-$input-color-placeholder:         $nc-text-color !default;
+$input-bg:                        $nc-top-color !default;
+$input-bg-disabled:               $nc-main-color !default;
+
+$input-color:                     #bababa !default;
+$input-border:                    $nc-main-color !default;
+$input-border-width:              1px !default;
+$input-label-color:               $nc-top-color !default;
+$input-color-placeholder:         lighten(#222, 40%) !default;
+
+// Tabs
+// -------------------------------
+
+$tabs-height:                     49px !default;
+$tabs-text-font-size:             14px !default;
+$tabs-text-font-size-side-icon:   12px !default;
+$tabs-icon-size:                  32px !default;
+$tabs-badge-padding:              1px 6px !default;
+$tabs-badge-font-size:            12px !default;
+$tabs-text-font-size:             14px !default;
+
+$tabs-dark-bg:                    $nc-main-color !default;
+$tabs-dark-border:                $nc-top-color  !default;
+$tabs-dark-text:                  $nc-text-color !default;
+
 
 i {
     color: $nc-highlight-color;
@@ -59,7 +72,7 @@ i {
 .img {
     zoom: .5;
 }
-
+/*
 .list .my-item img {
   border-radius: .5em;
   height: 60px;
@@ -107,9 +120,27 @@ i {
 .menu i {
     font-size: 2em;
 }
+*/
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+// Tab Mixins
+// --------------------------------------------------
+
+@mixin tab-style($bg-color, $border-color, $color) {
+  border-color: $border-color;
+  background-color: blue;
+  background-image: linear-gradient(0deg, $border-color, $border-color 50%, transparent 50%);
+  color: $color;
+} 
+
+@mixin tab-badge-style($bg-color, $color) {
+  .tab-item .badge {
+    background-color: $bg-color;
+    color: $color;
+  }
+}
 

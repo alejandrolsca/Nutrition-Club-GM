@@ -10,19 +10,19 @@
 
     angular.module('app', [
         'ionic', 
-        //require('./tabs').name,
+        require('./tabs').name,
         require('./home').name,
         //require('./club-management').name,
         require('./daily-activity').name,   
         require('./daily-consumption').name,
         //require('./reports').name,
-        //require('./goals').name,
+        require('./goals').name,
         require('./more').name,
         //require('./settings').name
         //require('./login').name,
         //require('./logout').name
     ])
-
+//
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -40,7 +40,7 @@
 })(angular);
 
 
-},{"./daily-activity":"/Applications/MAMP/htdocs/nc-management/www/modules/daily-activity/index.js","./daily-consumption":"/Applications/MAMP/htdocs/nc-management/www/modules/daily-consumption/index.js","./home":"/Applications/MAMP/htdocs/nc-management/www/modules/home/index.js","./more":"/Applications/MAMP/htdocs/nc-management/www/modules/more/index.js"}],"/Applications/MAMP/htdocs/nc-management/www/modules/daily-activity/controllers/daily-activity-ctrl.js":[function(require,module,exports){
+},{"./daily-activity":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-activity\\index.js","./daily-consumption":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-consumption\\index.js","./goals":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\goals\\index.js","./home":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\home\\index.js","./more":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\more\\index.js","./tabs":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\tabs\\index.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-activity\\controllers\\daily-activity-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -49,7 +49,7 @@ module.exports = (function(angular){
     };
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/nc-management/www/modules/daily-activity/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-activity\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -57,17 +57,21 @@ module.exports = (function(angular){
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('daily-activity', {
+        .state('tab.daily-activity', {
           url: "/daily-activity",
-              templateUrl: "modules/daily-activity/views/daily-activity-view.html",
-              controller: 'DailyActivityCtrl'
+            views:{
+                "tab-daily-activity":{
+                  templateUrl: "modules/daily-activity/views/daily-activity-view.html",
+                  controller: 'DailyActivityCtrl'
+                }
+            }
         })
     })
 
     .controller('DailyActivityCtrl',require('./controllers/daily-activity-ctrl'))
     
 })(angular);
-},{"./controllers/daily-activity-ctrl":"/Applications/MAMP/htdocs/nc-management/www/modules/daily-activity/controllers/daily-activity-ctrl.js"}],"/Applications/MAMP/htdocs/nc-management/www/modules/daily-consumption/controllers/daily-consumption-ctrl.js":[function(require,module,exports){
+},{"./controllers/daily-activity-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-activity\\controllers\\daily-activity-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-consumption\\controllers\\daily-consumption-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -76,7 +80,7 @@ module.exports = (function(angular){
     };
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/nc-management/www/modules/daily-consumption/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-consumption\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -84,17 +88,52 @@ module.exports = (function(angular){
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('daily-consumption', {
+        .state('tab.daily-consumption', {
           url: "/daily-consumption",
-              templateUrl: "modules/daily-consumption/views/daily-consumption-view.html",
-              controller: 'DailyConsumptionCtrl'
+            views:{
+                "tab-daily-consumption":{
+                  templateUrl: "modules/daily-consumption/views/daily-consumption-view.html",
+                  controller: 'DailyConsumptionCtrl'
+                }
+            }
         })
     })
 
     .controller('DailyConsumptionCtrl',require('./controllers/daily-consumption-ctrl'))
     
 })(angular);
-},{"./controllers/daily-consumption-ctrl":"/Applications/MAMP/htdocs/nc-management/www/modules/daily-consumption/controllers/daily-consumption-ctrl.js"}],"/Applications/MAMP/htdocs/nc-management/www/modules/home/controllers/home-ctrl.js":[function(require,module,exports){
+},{"./controllers/daily-consumption-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-consumption\\controllers\\daily-consumption-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\goals\\controllers\\goals-ctrl.js":[function(require,module,exports){
+module.exports = (function(angular){
+    'use strict';
+    
+    return function ($scope, $ionicModal, $timeout) {
+    
+    };
+    
+})(angular);
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\goals\\index.js":[function(require,module,exports){
+module.exports = (function(angular){
+    'use strict';
+    
+    return angular.module('tab.goals',[])
+
+    .config(function($stateProvider, $urlRouterProvider) {
+      $stateProvider
+        .state('tab.goals', {
+          url: "/goals",
+          views: {
+            'tab-goals' :{
+              templateUrl: "modules/goals/views/goals-view.html",
+              controller: 'GoalsCtrl'
+            }
+          }
+        })
+    })
+
+    .controller('GoalsCtrl',require('./controllers/goals-ctrl'))
+    
+})(angular);
+},{"./controllers/goals-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\goals\\controllers\\goals-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\home\\controllers\\home-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -103,7 +142,7 @@ module.exports = (function(angular){
     };
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/nc-management/www/modules/home/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\home\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -111,17 +150,21 @@ module.exports = (function(angular){
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('home', {
+        .state('tab.home', {
           url: "/home",
+            views:{
+                "tab-home":{
                 templateUrl: "modules/home/views/home-view.html",
                 controller: 'HomeCtrl'
+                }
+            }
         })
     })
 
     .controller('HomeCtrl',require('./controllers/home-ctrl'))
     
 })(angular)
-},{"./controllers/home-ctrl":"/Applications/MAMP/htdocs/nc-management/www/modules/home/controllers/home-ctrl.js"}],"/Applications/MAMP/htdocs/nc-management/www/modules/more/controllers/more-ctrl.js":[function(require,module,exports){
+},{"./controllers/home-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\home\\controllers\\home-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\more\\controllers\\more-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -130,7 +173,7 @@ module.exports = (function(angular){
     };
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/nc-management/www/modules/more/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\more\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -138,14 +181,38 @@ module.exports = (function(angular){
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('more', {
+        .state('tab.more', {
           url: "/more",
-              templateUrl: "modules/more/views/more-view.html",
-              controller: 'MoreCtrl'
+            views:{
+                "tab-more":{
+                  templateUrl: "modules/more/views/more-view.html",
+                  controller: 'MoreCtrl'
+                }
+            }
         })
     })
 
     .controller('MoreCtrl',require('./controllers/more-ctrl'))
     
 })(angular);
-},{"./controllers/more-ctrl":"/Applications/MAMP/htdocs/nc-management/www/modules/more/controllers/more-ctrl.js"}]},{},["./www/modules/index.js"]);
+},{"./controllers/more-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\more\\controllers\\more-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\tabs\\index.js":[function(require,module,exports){
+module.exports = (function(angular){
+    'use strict';
+    
+    return angular.module('app.tab',[])
+
+    .config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+
+        .state('tab', {
+          url: "/tab",
+          abstract: true,
+          templateUrl: "modules/tabs/views/tabs-view.html"
+        })
+        
+        // if none of the above states are matched, use this as the fallback
+        $urlRouterProvider.otherwise('/tab/home');
+    })
+
+})(angular);
+},{}]},{},["./www/modules/index.js"]);

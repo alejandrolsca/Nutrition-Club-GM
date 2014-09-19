@@ -5,10 +5,14 @@ module.exports = (function(angular){
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
-        .state('daily-consumption', {
+        .state('tab.daily-consumption', {
           url: "/daily-consumption",
-              templateUrl: "modules/daily-consumption/views/daily-consumption-view.html",
-              controller: 'DailyConsumptionCtrl'
+            views:{
+                "tab-daily-consumption":{
+                  templateUrl: "modules/daily-consumption/views/daily-consumption-view.html",
+                  controller: 'DailyConsumptionCtrl'
+                }
+            }
         })
     })
 

@@ -226,7 +226,34 @@ module.exports = (function(angular){
     .controller('SettingsCtrl',require('./controllers/settings-ctrl'))
     
 })(angular);
-},{"./controllers/settings-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/settings/controllers/settings-ctrl.js"}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/tabs/index.js":[function(require,module,exports){
+},{"./controllers/settings-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/settings/controllers/settings-ctrl.js"}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/tabs/controllers/tabs-ctrl.js":[function(require,module,exports){
+module.exports = (function(angular){
+    'use strict';
+    
+    return function($scope, $ionicPopup, $timeout) {
+        $scope.badge1 = Math.floor((Math.random() * 10) + 1);
+        $scope.badge2 = Math.floor((Math.random() * 10) + 1);
+        $scope.badge3 = Math.floor((Math.random() * 10) + 1);
+        $scope.badge4 = Math.floor((Math.random() * 10) + 1);
+        
+        // A confirm dialog
+         $scope.showConfirm = function() {
+           var confirmPopup = $ionicPopup.confirm({
+             title: 'Log out',
+             template: 'Are you sure you want to log out?'
+           });
+           confirmPopup.then(function(res) {
+             if(res) {
+               console.log('You are sure');
+             } else {
+               console.log('You are not sure');
+             }
+           });
+         };
+    }
+    
+})(angular);
+},{}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/tabs/index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -238,12 +265,15 @@ module.exports = (function(angular){
         .state('tab', {
           url: "/tab",
           abstract: true,
-          templateUrl: "modules/tabs/views/tabs-view.html"
+          templateUrl: "modules/tabs/views/tabs-view.html",
+          controller: 'TabsCtrl'
         })
         
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/tab/home');
     })
+    
+    .controller('TabsCtrl',require('./controllers/tabs-ctrl'));
 
 })(angular);
-},{}]},{},["./www/modules/index.js"]);
+},{"./controllers/tabs-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/tabs/controllers/tabs-ctrl.js"}]},{},["./www/modules/index.js"]);

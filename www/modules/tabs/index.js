@@ -9,11 +9,14 @@ module.exports = (function(angular){
         .state('tab', {
           url: "/tab",
           abstract: true,
-          templateUrl: "modules/tabs/views/tabs-view.html"
+          templateUrl: "modules/tabs/views/tabs-view.html",
+          controller: 'TabsCtrl'
         })
         
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/tab/home');
     })
+    
+    .controller('TabsCtrl',require('./controllers/tabs-ctrl'));
 
 })(angular);

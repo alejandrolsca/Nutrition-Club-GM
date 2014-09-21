@@ -12,7 +12,6 @@
         'kendo.directives', 
         require('./tabs').name,
         require('./home').name,
-        //require('./club-management').name,
         require('./daily-activity').name,   
         require('./daily-consumption').name,
         //require('./reports').name,

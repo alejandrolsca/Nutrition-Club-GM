@@ -1,10 +1,23 @@
 [
 	{
-		"monday": 100,
-		"tuesday": 200,
-		"wednesday": 300,
-		"thursday": 400,
-		"friday": 500,
-		"saturday": 600
+		"sample1": 100,
+		"sample2": 200,
+		"sample3": 300
+	},{
+		"sample1": 100,
+		"sample2": 200,
+		"sample3": 300
+	},{
+		"sample1": 100,
+		"sample2": 200,
+		"sample3": 300
+	},{
+		"sample1": 100,
+		"sample2": 200,
+		"sample3": 300
+	},{
+		"sample1": 100,
+		"sample2": 200,
+		"sample3": 300
 	}
 ]

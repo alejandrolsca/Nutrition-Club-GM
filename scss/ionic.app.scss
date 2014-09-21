@@ -14,6 +14,9 @@ $assertive:                       #ef4e3a !default;
 $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
 */
+$balanced:                        #8CC641 !default;
+
+
 $base-background-color:           #222 !default;
 $base-color:                      #999 !default;
 
@@ -38,6 +41,27 @@ $tabs-default-bg:                 transparent !default;
 $tabs-default-border:             #333 !default;
 $tabs-default-text:               #555 !default;
 
+$input-label-color:               #fff !default;
+
+img {
+    zoom: .5;
+ }
+
+.list .my-item img {
+  border-radius: .5em;
+  float: left;
+  margin-right: 10px;
+}
+.list .my-item.item {
+  left: 0;
+  right: 0;
+  padding: 10px;
+}
+
+textarea {
+    background: #333;
+}
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
@@ -53,12 +77,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
-    color: #3aafff;
+    color: #8CC641;
 }
 
 .tab-item {
     border-right:1px solid #222;
 }
- img {
-    zoom: .5;
- }

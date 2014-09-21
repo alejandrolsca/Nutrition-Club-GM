@@ -1,18 +1,30 @@
-<ion-view title="Home">
-    <ion-nav-buttons side="right">
-      <a class="button icon-left ion-gear-a button-dark" href="#/tab/settings">
+<ion-view title="<img src='img/hl-logo.png'>">
+    <ion-nav-buttons side="left">
+      <a class="button icon ion-person-add button-dark" href="#/tab/home/members">
 
       </a>
    </ion-nav-buttons>
-  
-  <ion-content class="padding">
+    <ion-nav-buttons side="right">
+      <a class="button icon ion-gear-a button-dark" href="#/tab/settings">
+
+      </a>
+   </ion-nav-buttons>
+  <div class="bar bar-subheader item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input type="search" placeholder="Search">
+          </label>
+          <button class="button button-icon ion-ios7-close-empty button-clear">
+          </button>
+   </div>
+  <ion-content class="has-header" padding="true">
+      <div class="content has-header">
+            Takanori's Club <br>
+            Rating: A<sup><i style="font-size:.75em;color: yellow" class="icon ion-android-star"></i><i style="font-size:.75em;color: yellow" class="icon ion-android-star"></i></sup>
             <div kendo-chart
                  k-data-source="electricity"
                  k-options="chartOptions"
                  ></div>
-        <div class="box-col">
-            <h6>Console</h6>
-            <div class="console"></div>
-        </div>
+    </div>
   </ion-content>
 </ion-view>

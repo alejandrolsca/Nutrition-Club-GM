@@ -6,10 +6,10 @@ module.exports = (function(angular){
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('tab.members', {
-          url: "/club-management/members",
+          url: "/home/members",
           views: {
-            'tab-club-management' :{
-              templateUrl: "modules/club-management/modules/members/views/members-view.html",
+            'tab-home' :{
+              templateUrl: "modules/home/modules/members/views/members-view.html",
               controller: 'MembersCtrl'
             }
           }

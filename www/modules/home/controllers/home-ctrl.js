@@ -21,12 +21,9 @@ module.exports = function ($scope) {
                 data: $scope.electricity
             },
             series:[
-                { field: 'monday', name: 'Monday' },
-                { field: 'tuesday', name: 'Tuesday' },
-                { field: 'wednesday', name: 'Wednesday' },
-                { field: 'thursday', name: 'Thursday' },
-                { field: 'friday', name: 'Friday' },
-                { field: 'saturday', name: 'Saturday' }
+                { field: 'sample1', name: 'Sample 1' },
+                { field: 'sample2', name: 'Sample 2' },
+                { field: 'sample3', name: 'Sample 3' },
             ],
             seriesHover: onSeriesHover,
             chartArea: {

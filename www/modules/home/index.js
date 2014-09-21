@@ -1,7 +1,9 @@
 module.exports = (function(angular){
     'use strict';
     
-    return angular.module('app.home',[])
+    return angular.module('app.home',[
+        require('./modules/members').name
+    ])
 
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider

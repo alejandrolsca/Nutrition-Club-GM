@@ -35,7 +35,7 @@ module.exports = (function(angular){
          };
         
         $scope.members = [];
-        for(var i=0;i<3000;i++){
+        for(var i=0;i<100;i++){
             $scope.members.push({"id":"ID: "+i,"name":"McFly "+i})
         }
         $scope.getItemHeight = function(item, index) {

@@ -1,7 +1,6 @@
-<ion-view title='<img src="img/nc-logo.png" class="img">'>
+<ion-view title='<img src="img/hl-logo.png">'>
     <ion-nav-buttons side="right">
-      <button class="button icon-left ion-person-add button-positive">
-          New
+      <button class="button icon-left ion-person-add button-dark">
       </button>
    </ion-nav-buttons>
   <div class="bar bar-subheader item-input-inset">
@@ -15,12 +14,12 @@
     </div>
   <ion-content class="has-header">
     <div class="list has-header">
-          <div class="item item-button-right my-item"
+          <div class="item item-button-right item-dark my-item"
              collection-repeat="member in members"
              collection-item-width="'100%'"
              collection-item-height="80"
              ng-click="show()">
-              <img src="img/mcfly.png">
+              <img src="../img/mcfly.png">
               <h2>{{member.name}}</h2>
               <p>{{member.id}}</p>
           </div>

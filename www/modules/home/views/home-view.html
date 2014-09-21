@@ -6,6 +6,13 @@
    </ion-nav-buttons>
   
   <ion-content class="padding">
-    <h1>Home</h1>
+            <div kendo-chart
+                 k-data-source="electricity"
+                 k-options="chartOptions"
+                 ></div>
+        <div class="box-col">
+            <h6>Console</h6>
+            <div class="console"></div>
+        </div>
   </ion-content>
 </ion-view>

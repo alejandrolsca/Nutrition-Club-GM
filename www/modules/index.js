@@ -9,6 +9,7 @@
 
     angular.module('app', [
         'ionic', 
+        'kendo.directives', 
         require('./tabs').name,
         require('./home').name,
         //require('./club-management').name,

@@ -10,6 +10,7 @@
 
     angular.module('app', [
         'ionic', 
+        'kendo.directives', 
         require('./tabs').name,
         require('./home').name,
         //require('./club-management').name,
@@ -40,7 +41,7 @@
 })(angular);
 
 
-},{"./daily-activity":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/daily-activity/index.js","./daily-consumption":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/daily-consumption/index.js","./goals":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/goals/index.js","./home":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/home/index.js","./more":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/more/index.js","./settings":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/settings/index.js","./tabs":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/tabs/index.js"}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/daily-activity/controllers/daily-activity-ctrl.js":[function(require,module,exports){
+},{"./daily-activity":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-activity\\index.js","./daily-consumption":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-consumption\\index.js","./goals":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\goals\\index.js","./home":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\home\\index.js","./more":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\more\\index.js","./settings":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\settings\\index.js","./tabs":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\tabs\\index.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-activity\\controllers\\daily-activity-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -49,7 +50,7 @@ module.exports = (function(angular){
     };
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/daily-activity/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-activity\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -71,7 +72,7 @@ module.exports = (function(angular){
     .controller('DailyActivityCtrl',require('./controllers/daily-activity-ctrl'))
     
 })(angular);
-},{"./controllers/daily-activity-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/daily-activity/controllers/daily-activity-ctrl.js"}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/daily-consumption/controllers/daily-consumption-ctrl.js":[function(require,module,exports){
+},{"./controllers/daily-activity-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-activity\\controllers\\daily-activity-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-consumption\\controllers\\daily-consumption-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -80,7 +81,7 @@ module.exports = (function(angular){
     };
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/daily-consumption/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-consumption\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -102,7 +103,7 @@ module.exports = (function(angular){
     .controller('DailyConsumptionCtrl',require('./controllers/daily-consumption-ctrl'))
     
 })(angular);
-},{"./controllers/daily-consumption-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/daily-consumption/controllers/daily-consumption-ctrl.js"}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/goals/controllers/goals-ctrl.js":[function(require,module,exports){
+},{"./controllers/daily-consumption-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\daily-consumption\\controllers\\daily-consumption-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\goals\\controllers\\goals-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -111,7 +112,7 @@ module.exports = (function(angular){
     };
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/goals/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\goals\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -133,16 +134,66 @@ module.exports = (function(angular){
     .controller('GoalsCtrl',require('./controllers/goals-ctrl'))
     
 })(angular);
-},{"./controllers/goals-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/goals/controllers/goals-ctrl.js"}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/home/controllers/home-ctrl.js":[function(require,module,exports){
-module.exports = (function(angular){
-    'use strict';
-    
-    return function ($scope) {
-    
+},{"./controllers/goals-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\goals\\controllers\\goals-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\home\\controllers\\home-ctrl.js":[function(require,module,exports){
+module.exports = function ($scope) {
+        
+        var onSeriesHover = function(e) {
+            kendoConsole.log(kendo.format("event :: seriesHover ({0} : {1})", e.series.name, e.value));
+        };
+        
+        $scope.chartOptions = {
+            theme: "black",
+            title: {
+                    text: "SP/SR STATS"
+            },
+            legend: {
+                    visible: true,
+                    position: "bottom"
+            },
+            seriesDefaults: {
+                    type: "column",
+                    //stack: true
+            },
+            dataSource:{
+                data: $scope.electricity
+            },
+            series:[
+                { field: 'monday', name: 'Monday' },
+                { field: 'tuesday', name: 'Tuesday' },
+                { field: 'wednesday', name: 'Wednesday' },
+                { field: 'thursday', name: 'Thursday' },
+                { field: 'friday', name: 'Friday' },
+                { field: 'saturday', name: 'Saturday' }
+            ],
+            seriesHover: onSeriesHover,
+            chartArea: {
+                background: "transparent",
+                width: 300,
+                height: 300
+            },
+            tooltip: {
+                visible: true,
+                format: "{0}"
+            },
+            transitions: false
+        };
+
+        $scope.electricity = new kendo.data.DataSource({
+            transport: {
+                read: {
+                    url: "modules/home/data/spain-electricity.json",
+                    dataType: "json"
+                }
+            },
+            sort: {
+                field: "year",
+                dir: "asc"
+            }
+        });
     };
     
-})(angular);
-},{}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/home/index.js":[function(require,module,exports){
+
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\home\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -164,7 +215,7 @@ module.exports = (function(angular){
     .controller('HomeCtrl',require('./controllers/home-ctrl'))
     
 })(angular)
-},{"./controllers/home-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/home/controllers/home-ctrl.js"}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/more/controllers/more-ctrl.js":[function(require,module,exports){
+},{"./controllers/home-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\home\\controllers\\home-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\more\\controllers\\more-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -173,7 +224,7 @@ module.exports = (function(angular){
     };
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/more/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\more\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -195,7 +246,7 @@ module.exports = (function(angular){
     .controller('MoreCtrl',require('./controllers/more-ctrl'))
     
 })(angular);
-},{"./controllers/more-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/more/controllers/more-ctrl.js"}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/settings/controllers/settings-ctrl.js":[function(require,module,exports){
+},{"./controllers/more-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\more\\controllers\\more-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\settings\\controllers\\settings-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -204,7 +255,7 @@ module.exports = (function(angular){
     };
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/settings/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\settings\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -226,7 +277,7 @@ module.exports = (function(angular){
     .controller('SettingsCtrl',require('./controllers/settings-ctrl'))
     
 })(angular);
-},{"./controllers/settings-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/settings/controllers/settings-ctrl.js"}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/tabs/controllers/tabs-ctrl.js":[function(require,module,exports){
+},{"./controllers/settings-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\settings\\controllers\\settings-ctrl.js"}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\tabs\\controllers\\tabs-ctrl.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -253,7 +304,7 @@ module.exports = (function(angular){
     }
     
 })(angular);
-},{}],"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/tabs/index.js":[function(require,module,exports){
+},{}],"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\tabs\\index.js":[function(require,module,exports){
 module.exports = (function(angular){
     'use strict';
     
@@ -276,4 +327,4 @@ module.exports = (function(angular){
     .controller('TabsCtrl',require('./controllers/tabs-ctrl'));
 
 })(angular);
-},{"./controllers/tabs-ctrl":"/Applications/MAMP/htdocs/Nutrition-Club-GM/www/modules/tabs/controllers/tabs-ctrl.js"}]},{},["./www/modules/index.js"]);
+},{"./controllers/tabs-ctrl":"C:\\wamp\\www\\nutrition-club-gm\\www\\modules\\tabs\\controllers\\tabs-ctrl.js"}]},{},["./www/modules/index.js"]);

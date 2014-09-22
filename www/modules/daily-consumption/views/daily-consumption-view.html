@@ -1,51 +1,55 @@
 <ion-view title='<img src="img/hl-logo.png">'>
     <ion-nav-buttons side="right">
-      <button class="button icon-left ion-checkmark button-dark">
-        Save
+      <button class="button icon-left ion-close button-assertive">
+        {{'common.cancel' | i18n}}
       </button>
    </ion-nav-buttons>
   <ion-content class="has-header" padding="true">
-    <h4>Daily Consumption</h4>
+    <h4>{{'consumption.title' | i18n}}</h4>
     <div class="list">
-      <label class="item item-input item-dark">
-        <span class="input-label">Date</span>
-        <input type="date" placeholder="14/09/2014">
+      <label class="item item-input item-light">
+        <span class="input-label">{{'consumption.field1.label' | i18n}}</span>
+        <input type="date" placeholder="{{'consumption.field1.placeholder' | i18n}}">
       </label>
-      <label class="item item-input item-dark">
-        <span class="input-label">Personal VP</span>
-        <input type="number" placeholder="SP/SR personal VP">
+      <label class="item item-input item-light">
+        <span class="input-label">{{'consumption.field2.label' | i18n}}</span>
+        <input type="number" placeholder="{{'consumption.field2.placeholder' | i18n}}">
       </label>
-      <label class="item item-input item-dark">
-        <span class="input-label">Name</span>
-        <input type="tel" placeholder="Customer's name">
+      <label class="item item-input item-light">
+        <span class="input-label">{{'consumption.field3.label' | i18n}}</span>
+        <input type="tel" placeholder="{{'consumption.field3.placeholder' | i18n}}">
       </label>
-      <label class="item item-input item-select item-dark">
+      <label class="item item-input item-select item-light">
         <div class="input-label">
-          Consumer's Type
+          {{'consumption.field4.label' | i18n}}
         </div>
         <select>
-          <option>New</option>
-          <option selected>Recommended</option>
-          <option>Exiting</option>
+          <option>{{'consumption.field4.options.option1' | i18n}}</option>
+          <option selected>{{'consumption.field4.options.option2' | i18n}}</option>
+          <option>{{'consumption.field4.options.option3' | i18n}}</option>
         </select>
       </label>
-      <label class="item item-input item-dark">
-        <span class="input-label">Customer's VP</span>
-        <input type="number" placeholder="Customer's VP">
+      <label class="item item-input item-light">
+        <span class="input-label">{{'consumption.field5.label' | i18n}}</span>
+        <input type="number" placeholder="{{'consumption.field5.placeholder' | i18n}}">
       </label>
-      <label class="item item-input item-select item-dark">
+      <label class="item item-input item-select item-light">
         <div class="input-label">
-          Type of consumption
+          {{'consumption.field6.label' | i18n}}
         </div>
         <select>
-          <option>7 day card</option>
-          <option selected>Long Term</option>
-          <option>Others</option>
+          <option>{{'consumption.field6.options.option1' | i18n}}</option>
+          <option selected>{{'consumption.field6.options.option2' | i18n}}</option>
+          <option>{{'consumption.field6.options.option3' | i18n}}</option>
         </select>
       </label>
-      <label class="item item-input item-dark">
-        <span class="input-label">Total Consumption VP</span>
-        <input type="number" placeholder="Total VP">
+      <label class="item item-input item-light">
+        <span class="input-label">{{'consumption.field7.label' | i18n}}</span>
+        <input type="number" placeholder="{{'consumption.field7.placeholder' | i18n}}">
       </label>
+      </div>
+      <button class="button button-full button-assertive" ng-click="showAlert()">
+          {{'common.submit' | i18n}}
+      </button>
   </ion-content>
 </ion-view>

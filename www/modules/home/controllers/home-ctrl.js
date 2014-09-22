@@ -1,13 +1,9 @@
-module.exports = function ($scope) {
-        
-        var onSeriesHover = function(e) {
-            kendoConsole.log(kendo.format("event :: seriesHover ({0} : {1})", e.series.name, e.value));
-        };
+module.exports = function ($scope, i18nFilter) {      
         
         $scope.chartOptions = {
-            theme: "black",
+            theme: "Silver",
             title: {
-                    text: "SP/SR STATS"
+                    text: "SP/SR "+i18nFilter('home.stats')
             },
             legend: {
                     visible: true,
@@ -21,15 +17,14 @@ module.exports = function ($scope) {
                 data: $scope.electricity
             },
             series:[
-                { field: 'sample1', name: 'Sample 1' },
-                { field: 'sample2', name: 'Sample 2' },
-                { field: 'sample3', name: 'Sample 3' },
+                { field: 'sample1', name: i18nFilter('home.sample','1') },
+                { field: 'sample2', name: i18nFilter('home.sample','2') },
+                { field: 'sample3', name: i18nFilter('home.sample','3') }
             ],
-            seriesHover: onSeriesHover,
             chartArea: {
                 background: "transparent",
                 width: 300,
-                height: 300
+                height: 280
             },
             tooltip: {
                 visible: true,

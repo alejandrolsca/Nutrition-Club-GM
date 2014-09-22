@@ -1,26 +1,27 @@
 <ion-view title="<img src='img/hl-logo.png'>">
     <ion-nav-buttons side="left">
-      <a class="button icon ion-person-add button-dark" href="#/tab/home/members">
+      <a class="button button-clear icon ion-person-stalker my-icon" href="#/tab/home/members">
 
       </a>
    </ion-nav-buttons>
     <ion-nav-buttons side="right">
-      <a class="button icon ion-gear-a button-dark" href="#/tab/settings">
+      <a class="button button-clear icon ion-gear-a my-icon" href="#/tab/settings">
 
       </a>
    </ion-nav-buttons>
   <div class="bar bar-subheader item-input-inset">
           <label class="item-input-wrapper">
             <i class="icon ion-ios7-search placeholder-icon"></i>
-            <input type="search" placeholder="Search">
+            <input type="search" placeholder="{{'common.search' | i18n}}">
           </label>
-          <button class="button button-icon ion-ios7-close-empty button-clear">
+          <button class="button button-icon ion-ios7-close-empty button-clear button-light">
           </button>
    </div>
   <ion-content class="has-header" padding="true">
       <div class="content has-header">
             Takanori's Club <br>
-            Rating: A<sup><i style="font-size:.75em;color: yellow" class="icon ion-android-star"></i><i style="font-size:.75em;color: yellow" class="icon ion-android-star"></i></sup>
+            {{'home.rating' | i18n}}: A<sup><i style="font-size:.75em;color: #ffc700" class="icon ion-android-star"></i><i style="font-size:.75em;color: #ffc700" class="icon ion-android-star"></i></sup><br>
+            {{'home.location' | i18n}}: Beverly Hills 90210, CA, USA.<i style="font-size:1em;color: #ff9401" class="icon ion-android-location"></i></sup>
             <div kendo-chart
                  k-data-source="electricity"
                  k-options="chartOptions"

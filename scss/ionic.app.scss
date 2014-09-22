@@ -8,22 +8,34 @@ $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
 $positive:                        #4a87ee !default;
 $calm:                            #43cee6 !default;
-$balanced:                        #66cc33 !default;
-$energized:                       #f0b840 !default;
+$balanced:                        #7bbf39 !default;
+$energized:                       #fca523 !default;
 $assertive:                       #ef4e3a !default;
 $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
 */
-$balanced:                        #8CC641 !default;
 
+$base-background-color:           #f3f3f3 !default;
+$base-color:                      #515151 !default;
+$main-color:                      #319EA0 !default;
+$contrast-color:                  $main-color  !default;
+$gradient-start:                  $main-color !default;
+$gradient-end:                    $main-color !default;
 
-$base-background-color:           #222 !default;
-$base-color:                      #999 !default;
+$balanced:                        $main-color !default;
+$assertive:                       #ff9401 !default;
+
+// Buttons
+// -------------------------------
+
+$button-light-bg:                  #fff !default;
+
 
 // Bars
 // -------------------------------
 
-$bar-default-border:              #333 !default;
+$bar-default-text:                #fff !default;
+$bar-default-border:              #319EA0 !default;
 
 
 // Tabs
@@ -38,11 +50,30 @@ $tabs-badge-font-size:            12px !default;
 $tabs-text-font-size:             14px !default;
 
 $tabs-default-bg:                 transparent !default;
-$tabs-default-border:             #333 !default;
-$tabs-default-text:               #555 !default;
+$tabs-default-border:             #fff !default;
+$tabs-default-text:               #fff !default;
 
-$input-label-color:               #fff !default;
-
+$input-label-color:               #515151 !default;
+.login {
+    background-image: url(../img/login-bg.jpg) !important;
+    background-size: 100% auto;
+}
+.login .item {
+    background: rgba(#fff,.50);
+    border: none;
+    border-radius: .5em !important;
+    margin-bottom: .5em;
+}
+.login input[type=text], .login input[type=password] {
+    border-radius: .5em;
+}
+.login .list-inset {
+    background: transparent;
+    padding-top: 140px;
+}
+.login i {
+    color: #515151;
+}
 img {
     zoom: .5;
  }
@@ -57,9 +88,8 @@ img {
   right: 0;
   padding: 10px;
 }
-
-textarea {
-    background: #333;
+.my-icon {
+    color:#fff !important;
 }
 
 // The path for our ionicons font files, relative to the built CSS in www/css
@@ -69,17 +99,21 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 .bar {
-    background: -webkit-linear-gradient(top, rgba(#222,1) 0%,rgba(#333,1) 100%);
+    background: -webkit-linear-gradient(top, rgba($main-color,1) 0%,rgba($main-color,1) 100%);
+    border:none;
+}
+.bar-subheader {
+    background: -webkit-linear-gradient(top, rgba($contrast-color,.75) 0%,rgba($contrast-color,.75) 100%);
 }
 
 .tabs {
-    background: -webkit-linear-gradient(top, rgba(#333,1) 0%,rgba(#222,1) 100%);
+    background: -webkit-linear-gradient(top, rgba($gradient-end,1) 0%,rgba($gradient-start,1) 100%);
 }
 
 .tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
-    color: #8CC641;
+    color: $tabs-default-text;
 }
 
 .tab-item {
-    border-right:1px solid #222;
+    text-shadow: -1px 1px 1px rgba(#000,.25);
 }

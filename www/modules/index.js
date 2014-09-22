@@ -8,7 +8,8 @@
     'use strict';
 
     angular.module('app', [
-        'ionic', 
+        'ionic',
+        'i18n',
         'kendo.directives', 
         require('./tabs').name,
         require('./home').name,
@@ -22,7 +23,11 @@
         //require('./logout').name
     ])
 //
-    .run(function($ionicPlatform) {
+    .run(function($ionicPlatform,$i18n) {
+      $i18n
+        .addTranslation('en-US',require('./translations/en-US'))
+        .addTranslation('zh-CHS',require('./translations/zh-CHS'))
+        .setLang('en-US');
       $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)

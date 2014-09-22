@@ -7,27 +7,27 @@
 <ion-tabs class="tabs-icon-top">
 
 
-  <ion-tab badge="badge1" badge-style="badge-assertive" title="Home" icon="icon ion-home" href="#/tab/home">
+  <ion-tab badge="badge1" badge-style="badge-assertive" title="{{'tabs.tab1' | i18n}}" icon="icon ion-home" href="#/tab/home">
     <ion-nav-view name="tab-home"></ion-nav-view>
   </ion-tab>
 
 
-  <ion-tab badge="badge2" badge-style="badge-assertive" title="Activity" icon="icon ion-ios7-calendar-outline" href="#/tab/daily-activity">
+  <ion-tab badge="badge2" badge-style="badge-assertive" title="{{'tabs.tab2' | i18n}}" icon="icon ion-calendar" href="#/tab/daily-activity">
     <ion-nav-view name="tab-daily-activity"></ion-nav-view>
   </ion-tab>
   
 
-  <ion-tab badge="badge3" badge-style="badge-assertive" title="Consumption" icon="icon ion-bag" href="#/tab/daily-consumption">
+  <ion-tab badge="badge3" badge-style="badge-assertive" title="{{'tabs.tab3' | i18n}}" icon="icon ion-bag" href="#/tab/daily-consumption">
     <ion-nav-view name="tab-daily-consumption"></ion-nav-view>
   </ion-tab>
 
     
-  <ion-tab badge="badge4" badge-style="badge-assertive" title="Goals" icon="icon ion-trophy" href="#/tab/goals">
+  <ion-tab badge="badge4" badge-style="badge-assertive" title="{{'tabs.tab4' | i18n}}" icon="icon ion-trophy" href="#/tab/goals">
     <ion-nav-view name="tab-goals"></ion-nav-view>
   </ion-tab>
     
 
-  <ion-tab title="More" icon="icon ion-more" href="#/tab/more">
+  <ion-tab title="{{'tabs.tab5' | i18n}}" icon="icon ion-more" ng-click="show()">
     <ion-nav-view name="tab-more"></ion-nav-view>
   </ion-tab>
 

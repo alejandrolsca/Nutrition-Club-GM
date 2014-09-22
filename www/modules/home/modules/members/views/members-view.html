@@ -1,23 +1,24 @@
 <ion-view title='<img src="img/hl-logo.png">'>
     <ion-nav-buttons side="right">
-      <button class="button icon-left ion-person-add button-dark">
-      </button>
+      <a class="button button-clear icon-left ion-person-add button-light">
+      </a>
+   </ion-nav-buttons>
+   <ion-nav-buttons side="left">
+      <a class="button button-clear icon-left ion-arrow-left-c button-light" href="#/tab/home">
+      </a>
    </ion-nav-buttons>
   <div class="bar bar-subheader item-input-inset">
       <label class="item-input-wrapper">
         <i class="icon ion-ios7-search placeholder-icon"></i>
-        <input type="search" placeholder="Search">
+        <input type="search" placeholder="{{'common.search' | i18n}}">
       </label>
-      <button class="button button-clear">
-        Cancel
+      <button class="button button-icon ion-ios7-close-empty button-clear button-light">
       </button>
     </div>
   <ion-content class="has-header">
     <div class="list has-header">
-          <div class="item item-button-right item-dark my-item"
-             collection-repeat="member in members"
-             collection-item-width="'100%'"
-             collection-item-height="80"
+          <div class="item my-item"
+             ng-repeat="member in members"
              ng-click="show()">
               <img src="../img/mcfly.png">
               <h2>{{member.name}}</h2>

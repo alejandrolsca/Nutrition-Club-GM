@@ -1,16 +1,19 @@
 <ion-view title='<img src="img/hl-logo.png">'>
   <ion-nav-buttons side="left">
     <ion-nav-buttons side="right">
-      <a class="button icon-left ion-checkmark button-dark" href="#/tabs/home">
-        Save
+      <a class="button icon-left ion-checkmark button-assertive" href="#/tabs/home">
+        {{'common.save' | i18n }}
       </a>
    </ion-nav-buttons>
   </ion-nav-buttons>
   <ion-content class="has-header">
+   <div class="button-bar">
+          <a class="button" ng-click="setLang('en-US')">English</a>
+          <a class="button" ng-click="setLang('zh-CHS')">中国</a>
+   </div>
    <ul class="list">
-
-      <li class="item item-toggle item-dark">
-         Notifications
+       <li class="item item-toggle item-light">
+           {{'home.settings.setting1' | i18n }}
          <label class="toggle toggle-balanced">
            <input type="checkbox">
            <div class="track">
@@ -18,17 +21,17 @@
            </div>
          </label>
       </li>
-      <li class="item item-toggle item-dark">
-         Sounds
+      <li class="item item-toggle item-light">
+         {{'home.settings.setting2' | i18n }}
          <label class="toggle toggle-balanced">
-           <input type="checkbox" checked="dark">
+           <input type="checkbox" checked="light">
            <div class="track">
              <div class="handle"></div>
            </div>
          </label>
       </li>
-      <li class="item item-toggle item-dark">
-         Automatic Backups
+      <li class="item item-toggle item-light">
+         {{'home.settings.setting3' | i18n }}
          <label class="toggle toggle-balanced">
            <input type="checkbox">
            <div class="track">
@@ -36,8 +39,8 @@
            </div>
          </label>
       </li>
-      <li class="item item-toggle item-dark">
-         Push Notifications
+      <li class="item item-toggle item-light">
+         {{'home.settings.setting4' | i18n }}
          <label class="toggle toggle-balanced">
            <input type="checkbox" checked="checked">
            <div class="track">

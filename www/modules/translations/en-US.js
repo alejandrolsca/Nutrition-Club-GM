@@ -145,7 +145,7 @@ module.exports = {
     "more":{
         "title":"More",
         "optionstitle":"Select an option",
-        "option1":"Reportes",
+        "option1":"Reports",
         "option2":"KPI's (Summary)",
         "option3":"Trends",
         "option4":"Notifications",
